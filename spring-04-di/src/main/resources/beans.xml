@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="address" class="com.lzx.pojo.Address">
+        <property name="address" value="先洗"></property>
+    </bean>
+
+    <bean id="student" class="com.lzx.pojo.Student">
+        <property name="name" value="lzx"></property>
+        <property name="address" ref="address"></property>
+        <property name="books">
+            <array>
+                <value>红楼梦</value>
+                <value>西游记</value>
+                <value>水浒传</value>
+                <value>三国演义</value>
+            </array>
+        </property>
+        <property name="hobbys">
+            <list>
+                <value>乒乓球</value>
+                <value>代码</value>
+                <value>看电影</value>
+            </list>
+        </property>
+        <property name="card">
+            <map>
+                <entry key="身份证" value="111111111111"></entry>
+                <entry key="银行卡" value="222222222222"></entry>
+            </map>
+        </property>
+        <property name="game">
+            <set>
+                <value>大话西游</value>
+                <value>吃鸡</value>
+            </set>
+        </property>
+        <property name="wife">
+            <null></null>
+        </property>
+        <property name="info">
+            <props>
+                <prop key="学号">123</prop>
+                <prop key="年级">9年级</prop>
+            </props>
+        </property>
+    </bean>
+
+
+</beans>
